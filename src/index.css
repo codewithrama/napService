@@ -1,0 +1,307 @@
+/* Background gradient */
+
+body {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    background: linear-gradient(270deg, #d2ced6, #ee0979, #A7F3D0);
+    font-style: normal;
+    color: white;
+}
+
+.login-background {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 18s ease 0s infinite normal none running gradient-animation;
+}
+
+
+/* Login card */
+.login--form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 350px;
+}
+
+/* Title and subtitle */
+.login--title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.login--subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 500;
+}
+
+/* Inputs and select */
+input,
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 0.7rem;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+button {
+    width: fit-content;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 40px;
+    background: #ff6a00;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+button:hover {
+    background: #ff8c42;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Small text */
+p {
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.error-area {
+    position: fixed;
+    left: 90%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.logged-in {
+    background: #6EE7B7 !important;
+    color: black !important;
+
+}
+
+
+/* Cart icon fixed at very top-left */
+.cart-container {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: #4f46e5;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    /* leaves space for cart */
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: none;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 20px 0;
+}
+
+.sidebar li:hover {
+    transform: translateY(-2px);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    display: block;
+    padding: 10px 20px;
+    transition: #e2e8f0 0.3s;
+}
+
+.sidebar a:hover {
+    background: #e2e8f0;
+    border-radius: 8px;
+}
+
+/* Content shifted right so it doesn’t overlap sidebar */
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.food-item-key {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.food-item-key img {
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.food-item-key h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+.food-item-key p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+.food-item-key span {
+    font-weight: bold;
+    color: #111;
+}
+
+.food-item-key button {
+    margin-left: auto;
+    padding: 8px 12px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.food-item-key button:hover {
+    background: #6366f1;
+}
+
+.food-item-key button:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.food-menu {
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 5px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-details h3 {
+    margin: 0 0 10px 0;
+    color: #111;
+
+}
+
+.food-details p {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+
+
+.bouncing-element {
+
+    /* Essential for translateY to work as expected */
+    animation: bounce 2s infinite;
+    /* Apply the animation */
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+        /* Element at its original position */
+    }
+
+    40% {
+        transform: translateY(-30px);
+        /* Element moves upwards */
+    }
+
+    60% {
+        transform: translateY(-15px);
+        /* Element moves slightly upwards */
+    }
+}
